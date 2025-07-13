@@ -1,0 +1,21 @@
+pyinstaller --onefile --noconfirm --windowed --icon=7793227.ico ^
+  --name="OSINTTool" ^
+  --add-data "7793227.png;." ^
+  --manifest app.manifest ^
+  --version-file version.txt ^
+  --add-data "C:/Users/Theur/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0/LocalCache/local-packages/Python313/site-packages/newspaper/resources/text;newspaper/resources/text" ^
+  --add-data "OSINTUpdater.exe;." ^
+  NewsScraper.py
+
+
+pyinstaller updater.py --onefile --noconfirm --noconsole --name=updater
+
+
+pyinstaller --onefile --noconfirm --windowed --icon=7793227.ico ^
+  --name="OSINTTool_update" ^
+  --add-data "7793227.png;." ^
+  --manifest app.manifest ^
+  --version-file version.txt ^
+  --add-data "C:/Users/Theur/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0/LocalCache/local-packages/Python313/site-packages/newspaper/resources/text;newspaper/resources/text" ^
+  --add-data "OSINTUpdater.exe;." ^
+  NewsScraper.py
